@@ -3,6 +3,7 @@ import { SplashScreen, Stack } from "expo-router";
 import { Text } from "react-native";
 import { useFonts } from "expo-font";
 import GlobalProvider from "../context/GlobalProvider";
+import { StatusBar } from "expo-status-bar";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -44,6 +45,9 @@ const RootLayout = () => {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         {/* <Stack.Screen name="/search/[query]" options={{ headerShown: false }} /> */}
       </Stack>
+
+      <StatusBar backgroundColor="#161622" style="light" />
+
     </GlobalProvider>
   );
 };
